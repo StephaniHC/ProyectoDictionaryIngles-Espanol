@@ -2,7 +2,6 @@ package Presentacion;
 
 import Negocio.ArbolMViasBusqueda;
 import Negocio.Excepcion.ExcepcionOrdenArbolInvalido;
-import Negocio.IArbolBusqueda;
 import Negocio.Palabra;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -18,7 +17,7 @@ import javax.swing.JOptionPane;
  */
 public class Formulario extends javax.swing.JFrame {
     
-    private IArbolBusqueda<Palabra> arbol;
+    private ArbolMViasBusqueda<Palabra> arbol;
     private File words;
     private int cantDatos;
     private int orden;
@@ -34,7 +33,7 @@ public class Formulario extends javax.swing.JFrame {
         this.setResizable(false);
         this.setLocationRelativeTo(null);
         this.orden = 3;
-        this.words = new File("C:/Users/stephani/Documents/UAGRM/5to Semestre/Estructura de Datos II/proyectos/Proyecto ED2/src/Datos/words.txt");
+        this.words = new File("C:/Users/stephani/Documents/UAGRM/5to Semestre/Estructura de Datos II/ED2 verano/Proyecto verano ED2/ProyectoDictionaryIngles-Espanol/src/Datos/words.txt");
       
     }
 
@@ -48,10 +47,7 @@ public class Formulario extends javax.swing.JFrame {
     private void initComponents() {
 
         btnGroup = new javax.swing.ButtonGroup();
-        rBtnABB = new javax.swing.JRadioButton();
-        rBtnAAVL = new javax.swing.JRadioButton();
         rBtnAMVias = new javax.swing.JRadioButton();
-        rBtnAB = new javax.swing.JRadioButton();
         btnBuscar = new javax.swing.JButton();
         btnInsertar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
@@ -73,29 +69,6 @@ public class Formulario extends javax.swing.JFrame {
         setIconImages(null);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        rBtnABB.setBackground(new java.awt.Color(240, 220, 220));
-        btnGroup.add(rBtnABB);
-        rBtnABB.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
-        rBtnABB.setForeground(new java.awt.Color(0, 0, 204));
-        rBtnABB.setText("Arbol Binario de Búsqueda");
-        rBtnABB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rBtnABBActionPerformed(evt);
-            }
-        });
-        getContentPane().add(rBtnABB, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, -1, -1));
-
-        btnGroup.add(rBtnAAVL);
-        rBtnAAVL.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
-        rBtnAAVL.setForeground(new java.awt.Color(0, 0, 204));
-        rBtnAAVL.setText("Arbol AVL");
-        rBtnAAVL.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rBtnAAVLActionPerformed(evt);
-            }
-        });
-        getContentPane().add(rBtnAAVL, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, -1, -1));
-
         btnGroup.add(rBtnAMVias);
         rBtnAMVias.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
         rBtnAMVias.setForeground(new java.awt.Color(0, 0, 204));
@@ -105,18 +78,7 @@ public class Formulario extends javax.swing.JFrame {
                 rBtnAMViasActionPerformed(evt);
             }
         });
-        getContentPane().add(rBtnAMVias, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, -1, -1));
-
-        btnGroup.add(rBtnAB);
-        rBtnAB.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
-        rBtnAB.setForeground(new java.awt.Color(0, 0, 204));
-        rBtnAB.setText("Arbol B");
-        rBtnAB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rBtnABActionPerformed(evt);
-            }
-        });
-        getContentPane().add(rBtnAB, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, -1, -1));
+        getContentPane().add(rBtnAMVias, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, -1, -1));
 
         btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/search.png"))); // NOI18N
         btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -125,7 +87,7 @@ public class Formulario extends javax.swing.JFrame {
                 btnBuscarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 380, 60, 60));
+        getContentPane().add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 310, 60, 60));
 
         btnInsertar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/add.png"))); // NOI18N
         btnInsertar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -134,7 +96,7 @@ public class Formulario extends javax.swing.JFrame {
                 btnInsertarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnInsertar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 380, 60, 60));
+        getContentPane().add(btnInsertar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, 60, 60));
 
         btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/remove.png"))); // NOI18N
         btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -143,14 +105,14 @@ public class Formulario extends javax.swing.JFrame {
                 btnEliminarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 380, 60, 60));
+        getContentPane().add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 310, 60, 60));
 
         txtInput.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        getContentPane().add(txtInput, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 130, -1));
+        getContentPane().add(txtInput, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 130, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Ingresar Palabra:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, 130, 20));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 130, 20));
 
         jLabel3.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(102, 102, 102));
@@ -164,7 +126,7 @@ public class Formulario extends javax.swing.JFrame {
                 btnMoreActionPerformed(evt);
             }
         });
-        getContentPane().add(btnMore, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 380, 50, 60));
+        getContentPane().add(btnMore, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 310, 50, 60));
 
         txtOutput.setColumns(20);
         txtOutput.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
@@ -172,7 +134,7 @@ public class Formulario extends javax.swing.JFrame {
         txtOutput.setRows(5);
         jScrollPane1.setViewportView(txtOutput);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, 520, 50));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 520, 50));
 
         lbSize.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
         getContentPane().add(lbSize, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 460, 40, 31));
@@ -180,7 +142,7 @@ public class Formulario extends javax.swing.JFrame {
         jLabel6.setBackground(new java.awt.Color(204, 0, 51));
         jLabel6.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(204, 204, 255));
-        jLabel6.setText("DICTIONNAIRE");
+        jLabel6.setText("DICCTIONARY");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 160, 30));
 
         jLabel7.setBackground(new java.awt.Color(204, 0, 51));
@@ -192,7 +154,7 @@ public class Formulario extends javax.swing.JFrame {
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setText("Resultado:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 430, 100, 30));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, 100, 30));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/francia.png"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, 80, 60));
@@ -222,17 +184,8 @@ public class Formulario extends javax.swing.JFrame {
     }
 
     private int arbolEscogido() {
-        if (rBtnABB.isSelected()) {
-            return 0;
-        }
-        if (rBtnAAVL.isSelected()) {
-            return 1;            
-        }
         if (rBtnAMVias.isSelected()) {
             return 2;
-        }
-        if (rBtnAB.isSelected()) {
-            return 3;
         }
         return -1;
     }
@@ -311,18 +264,6 @@ public class Formulario extends javax.swing.JFrame {
             Logger.getLogger(Formulario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_rBtnAMViasActionPerformed
-
-    private void rBtnABActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBtnABActionPerformed
-
-    }//GEN-LAST:event_rBtnABActionPerformed
-
-    private void rBtnAAVLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBtnAAVLActionPerformed
- 
-    }//GEN-LAST:event_rBtnAAVLActionPerformed
-
-    private void rBtnABBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBtnABBActionPerformed
-
-    }//GEN-LAST:event_rBtnABBActionPerformed
 
     private void btnMoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMoreActionPerformed
         if (arbolEscogido() > -1) {
@@ -451,9 +392,6 @@ public class Formulario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lbSize;
-    private javax.swing.JRadioButton rBtnAAVL;
-    private javax.swing.JRadioButton rBtnAB;
-    private javax.swing.JRadioButton rBtnABB;
     private javax.swing.JRadioButton rBtnAMVias;
     private javax.swing.JTextField txtInput;
     private javax.swing.JTextArea txtOutput;
