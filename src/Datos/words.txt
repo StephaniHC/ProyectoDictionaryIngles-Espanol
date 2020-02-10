@@ -1,301 +1,300 @@
-duel: duelo
 chin: barbilla
-gold: oro
+duel: duelo
+admire: admirar/elogiar
 bud: capulo/yema
+coconut: coco
 currency: moneda extranjera
 fillet: filete
-people: gente
-admire: admirar/elogiar
-cap: gorra
-coconut: coco
-development: desarrollo
-exit: salida
-gaiety: alegria
-it: eso
-two: dos
+gold: oro
+aboard: abordar
 accept: aceptar/admitir
+also: tambien
 backpack: mochila
 camp: campamento
-cat: gato
+cap: gorra
+chord: acorde
 clad: vestido
+collect: recoger
 cook: cocinar
 day: dia
-doctrine: doctrina
+development: desarrollo
 educate: educar
-fake: imitacion
+exit: salida
 for: por, para
-gig: actuacion
-him: él
-new: nuevo
-than: que
-way: camino
-aboard: abordar
-active: activo
-also: tambien
-board: pizarra
-building: edificio
-can: poder
-cardiac: cardiaco
-cheer: aclamar/animar/alegrar
-chord: acorde
-client: cliente
-collect: recoger
-create: crear/producir
-daft: bobo
-dentist: dentista
-dirt: suciedad/mugre
-done: hecho
-dutiful: obediente
-elegant:  elegante
-facet: faceta
-female: femenino
-firing: tiroteo
-fully: completamente
-gem: piedra preciosa
-globe: globo
-hand: mano
-hour: hora
-man: hombre
-or: ó
-snitch: soplon
-they: ellos
-vegetable: verdura
-window: ventana
+gaiety: alegria
+it: eso
+people: gente
+abandon: abandonar
 abduct: secuestrar
+about: más o menos, acerca de
 absolutely: absolutamente
 accident: accidente/casualidad
-actress: actriz
+active: activo
+again: otra vez
 airplane: avión
+and: y
 as: como(en calidad de)
 be: ser o estar
-box: caja
+board: pizarra
 buff: entusiasta
-by: por, para
+building: edificio
 campus: ciudada universitaria
-cancel: cancelar
-card: tarjeta
-carrot: zanahoria
-chair: silla
-chess: ajedrez
+can: poder
+cardiac: cardiaco
+cellphone: teléfono móvil
+chocolate: chocolate
 chop: cortar algo
+christmas: navidad
 chubby: regordete
 clean: limpieza
-cock: gallo
+client: cliente
+cod: bacalao
 code: código
+colony: colonia
 come: venir
 couple: pareja
-cunning: astuto
+create: crear/producir
 custom: costumbre
-database: base de datos
+daft: bobo
 delete: borrar/tachar
-deploy: desplegar/se
-diary: diario
-discard: desechar/desecharse de
-dog: perro
-duct: conducto
+dentist: dentista
+dirt: suciedad/mugre
+doctrine: doctrina
 duly: debidamente
-ear: oreja
+dutiful: obediente
 egg: huevo
-engineering: ingenieria
-extreme: extremo
-fairly: justamente/equitativamente
-fame: fama
-fib: cuento
+elegant:  elegante
+facet: faceta
+fake: imitacion
 finger: dedo
-floor: suelo
+firing: tiroteo
 from: de
-fun: diversion
-game: juego
-get: dar en, obtener
-glasses: lentes/gafas/anteojos
-go: ir
-guard: proteger/guardar
-he: él
-hob: plancha
-i: yo
-know: saber
-mirror: espejo
-of: de
-pail: balde
-school: escuela/colegio
-table: mesa
-them: ellos
-those: esos
-up: arriba
-wallet: cartera
-when: cuándo
-would: haría
-abandon: abandonar
+fully: completamente
+gem: piedra preciosa
+gig: actuacion
+hand: mano
+him: él
+man: hombre
+new: nuevo
+than: que
+two: dos
 abilty: talento/capacidad/aptitud
-about: más o menos, acerca de
 absorb: absorber
 access: acceso
 account: cuenta
 actor: actor
-address: dirección
-again: otra vez
+actress: actriz
 all: todo
-and: y
 at: en/a
 balloon: globo
 because: porque
 bottle: botella
-bubble: burbuja
+box: caja
 buddy: colega
 buffer: amortiguador/tope/memoria intermedia
 but: sino que, pero
-calm: tranquilo
+by: por, para
+cancel: cancelar
+card: tarjeta
 cardigan: chaqueta
-cash: dinero
-cellphone: teléfono móvil
-charger: cargador
-cheese: queso
-chew: masticar algo
-chocolate: chocolate
+carrot: zanahoria
+chair: silla
+cheer: aclamar/animar/alegrar
 choral: coral
-christmas: navidad
 chuck: tirar
 clan: clan
 clef: clave
 cliff: acantilado
-cocoa: cacao
-cod: bacalao
+cock: gallo
 coffee: café
-colony: colonia
 computer: computadora
 could: podria
 crab: cangrejo
 cult: culto
-cupboard: armario
+cunning: astuto
 curt: brusco
 dab: tocar algo ligeramente
 darling: encanto
-dawn: amanecer
+database: base de datos
 delegate: delegado
 den: guardia
 deny: negar
-desk: escritorio
+deploy: desplegar/se
 diamond: diamante
-diet: dieta
+diary: diario
 disc: disco
+discard: desechar/desecharse de
+dog: perro
+done: hecho
+duke: duque
+dumb: mundo
+dystrophy: distrofia
+ear: oreja
+effect: efecto
+elbow: codo
+engineer: ingeniero/a
+engineering: ingenieria
+explain: explicar/aclarar algo
+extreme: extremo
+factor: factor
+fairly: justamente/equitativamente
+fame: fama
+female: femenino
+find: encontrar/hallar/buscar
+firefighter: bombero
+first: primero
+floor: suelo
+forever: para siempre
+fruit: fruta
+fumble: maniplar torpemente algo
+fun: diversion
+gait: paso/andar
+game: juego
+generally: generalmente
+get: dar en, obtener
+glasses: lentes/gafas/anteojos
+globe: globo
+grade: clase/categoria
+guard: proteger/guardar
+haul: tirar/arrastrar
+he: él
+hob: plancha
+hour: hora
+just: solo
+know: saber
+marker: marcador
+mirror: espejo
+of: de
+or: ó
+school: escuela/colegio
+snitch: soplon
+them: ellos
+they: ellos
+vegetable: verdura
+way: camino
+address: dirección
+bubble: burbuja
+calm: tranquilo
+cash: dinero
+charger: cargador
+cheese: queso
+chess: ajedrez
+cocoa: cacao
+cupboard: armario
+dawn: amanecer
+desk: escritorio
+diet: dieta
 do: hacer
 documentary: documental
 dominant: dominante
 doze: dormitar
-dud: defectuoso
-duke: duque
-dumb: mundo
-dystrophy: distrofia
+duct: conducto
 eat: comer
-effect: efecto
-elbow: codo
-engineer: ingeniero/a
 even: emparejar
-explain: explicar/aclarar algo
 fabulous: fabuloso
-factor: factor
 fairy: hada
 fall: caida
 feel: sentir/tocar
 fever: fiebre
-field: campo
-find: encontrar/hallar/buscar
-firefighter: bombero
-first: primero
+fib: cuento
 flower: flor
-forever: para siempre
-fruit: fruta
-fumble: maniplar torpemente algo
 funny: gracioso/divertido
-gait: paso/andar
 gaunt: demacrado
-generally: generalmente
 gift: regalo
 give: recibir
 global: mundial
 glove: guante
-god: Dios
-grade: clase/categoria
-habit: costumbre
-haul: tirar/arrastrar
-her: ella
-hip: cadera
-honest: honrado
-hub: cubo
-in: en
-just: solo
-look: mirar
-marker: marcador
-mouse: ratón
-not: no
-one: uno
-our: nuestro
-pencil: lápiz
-picture: imagen/cuadro/retrato
-she: ella
-some: algunos
-teacher: profesor/a
-the: el,la,los
-there: ahi
-think: pensar
-time: tiempo
-umbrella: paraguas
-use: usar
-very: muy
-want: querer
-well: bien, bueno
-will: intencion, voluntad, deseo
-with: con
-you: tú
+go: ir
 gory: sangriento
 grubby: sucio
 gun: arma
-hair: pelo/cabello
+habit: costumbre
 hard: duro
 have: tener
 heart: corazon
-here: aqui
+her: ella
 hint: insinuacion
-his: su
+hip: cadera
 hoist: levantar
+honest: honrado
+hub: cubo
+i: yo
+its: su,sus,suyo
+keyboard: teclado
+like: gustar
+look: mirar
+many: muchos
+me: mí
+more: más
+mouse: ratón
+no: no
+not: no
+on: sobre, encima de
+one: uno
+our: nuestro
+pail: balde
+photography: fotografía
+picture: imagen/cuadro/retrato
+see: ver
+she: ella
+some: algunos
+table: mesa
+that: eso,esa
+the: el,la,los
+then: entonces
+there: ahi
+think: pensar
+those: esos
+umbrella: paraguas
+up: arriba
+very: muy
+wallet: cartera
+when: cuándo
+window: ventana
+chew: masticar algo
+dud: defectuoso
+field: campo
+god: Dios
+hair: pelo/cabello
+here: aqui
+his: su
 hope: esperanza
 how: como
 humid: humedo
 if: si(condicional)
-into: dentro de
-its: su,sus,suyo
-keyboard: teclado
-like: gustar
+in: en
 make: preparar
-many: muchos
-me: mí
-more: más
 my: mi, mis
-no: no
 now: ahora
-on: sobre, encima de
 only: solo
 other: otro
 out: fuera de
 pen: bolígrafo/lapicero
-pendriver: memoria portatil
-photography: fotografía
-see: ver
+pencil: lápiz
 shirt: camisa
 so: tan
 syrup: jarabe
 take: tomar
-tell: decir
-that: eso,esa
+teacher: profesor/a
 their: sus
-then: entonces
 these: estos, estas
 thing: cosa
 this: esta
 thread: hilo
-to: hacia, para
+time: tiempo
+use: usar
+want: querer
 we: nosotros
-what: qué
+well: bien, bueno
 which: cuál
+will: intencion, voluntad, deseo
+with: con
+would: haría
+into: dentro de
+pendriver: memoria portatil
+tell: decir
+to: hacia, para
+what: qué
 year: año
+you: tú
 your: tus

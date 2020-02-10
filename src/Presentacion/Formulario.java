@@ -32,9 +32,19 @@ public class Formulario extends javax.swing.JFrame {
         this.setTitle("Dictionary");
         this.setResizable(false);
         this.setLocationRelativeTo(null);
+        
         this.orden = 3;
-        this.words = new File("C:/Users/stephani/Documents/UAGRM/5to Semestre/Estructura de Datos II/ED2 verano/Proyecto verano ED2/ProyectoDictionaryIngles-Espanol/src/Datos/words.txt");
-      
+        this.words = new File("C:/Margarita/Proyecto ED2/ProyectoDictionaryIngles-Espanol/src/Datos/words.txt");
+      try {
+            this.arbol = new ArbolMViasBusqueda<>(this.orden);
+        } catch (ExcepcionOrdenArbolInvalido ex) {
+            Logger.getLogger(Formulario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            this.cantDatos = cargarDatosAlArbol();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Formulario.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -47,12 +57,9 @@ public class Formulario extends javax.swing.JFrame {
     private void initComponents() {
 
         btnGroup = new javax.swing.ButtonGroup();
-        rBtnAMVias = new javax.swing.JRadioButton();
         btnBuscar = new javax.swing.JButton();
         btnInsertar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
-        txtInput = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         btnMore = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -62,23 +69,15 @@ public class Formulario extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        txtIncremet = new javax.swing.JTextField();
+        ordenArbol = new javax.swing.JScrollBar();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 255, 204));
         setIconImages(null);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btnGroup.add(rBtnAMVias);
-        rBtnAMVias.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
-        rBtnAMVias.setForeground(new java.awt.Color(0, 0, 204));
-        rBtnAMVias.setText("Arbol M-Vias");
-        rBtnAMVias.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rBtnAMViasActionPerformed(evt);
-            }
-        });
-        getContentPane().add(rBtnAMVias, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, -1, -1));
 
         btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/search.png"))); // NOI18N
         btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -106,13 +105,6 @@ public class Formulario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 310, 60, 60));
-
-        txtInput.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        getContentPane().add(txtInput, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 130, -1));
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setText("Ingresar Palabra:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 130, 20));
 
         jLabel3.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(102, 102, 102));
@@ -159,6 +151,28 @@ public class Formulario extends javax.swing.JFrame {
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/francia.png"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, 80, 60));
 
+        txtIncremet.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        getContentPane().add(txtIncremet, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, 30, 30));
+
+        ordenArbol.setMaximum(40);
+        ordenArbol.setMinimum(3);
+        ordenArbol.setVisibleAmount(7);
+        ordenArbol.setName(""); // NOI18N
+        ordenArbol.addAdjustmentListener(new java.awt.event.AdjustmentListener() {
+            public void adjustmentValueChanged(java.awt.event.AdjustmentEvent evt) {
+                ordenArbolAdjustmentValueChanged(evt);
+            }
+        });
+        getContentPane().add(ordenArbol, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 250, 20, 30));
+
+        jButton1.setText("Crear arbol");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 210, -1, -1));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo2.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 540));
 
@@ -184,25 +198,19 @@ public class Formulario extends javax.swing.JFrame {
     }
 
     private int arbolEscogido() {
-        if (rBtnAMVias.isSelected()) {
+       
             return 2;
-        }
-        return -1;
+       
     }
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-        if (arbolEscogido() > -1) {
-            String word = txtInput.getText();
+            String word = JOptionPane.showInputDialog("Palabra a buscar");
             word = word.toLowerCase();
             Palabra palabra = arbol.getDatoEnNodo(new Palabra(word, ""));
             if (palabra != null) {
                 txtOutput.setText(palabra.getDefinition());
             } else {
                 JOptionPane.showMessageDialog(null, "Palabra no encontrada");
-            }
-        }else{
-            JOptionPane.showMessageDialog(null, "Escoja un Arbol !", "Advertencia !", 2);
-        }
-        
+            }             
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void btnInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertarActionPerformed
@@ -230,8 +238,8 @@ public class Formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_btnInsertarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-        if (arbolEscogido() > -1) {
-            String word = txtInput.getText();
+
+            String word = JOptionPane.showInputDialog("Ingrese la palabra a eliminar");
             boolean b = this.arbol.eliminar(new Palabra(word, ""));
             if (b) {
                 JOptionPane.showMessageDialog(null, "Palabra eliminada correctamente");
@@ -246,24 +254,7 @@ public class Formulario extends javax.swing.JFrame {
             }
             this.cantDatos--;
              lbSize.setText(Integer.toString(this.cantDatos));
-        } else {
-            JOptionPane.showMessageDialog(null, "Escoja un Arbol !", "Advertencia !", 2);
-        }
     }//GEN-LAST:event_btnEliminarActionPerformed
-
-    private void rBtnAMViasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBtnAMViasActionPerformed
-        this.orden = Integer.parseInt(JOptionPane.showInputDialog("Orden: "));
-        try {
-            this.arbol = new ArbolMViasBusqueda<>(this.orden);
-        } catch (ExcepcionOrdenArbolInvalido ex) {
-            Logger.getLogger(Formulario.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        try {
-            this.cantDatos = cargarDatosAlArbol();
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Formulario.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_rBtnAMViasActionPerformed
 
     private void btnMoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMoreActionPerformed
         if (arbolEscogido() > -1) {
@@ -308,6 +299,24 @@ public class Formulario extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Escoja un Arbol !", "Advertencia !", 2);
         }
     }//GEN-LAST:event_btnMoreActionPerformed
+
+    private void ordenArbolAdjustmentValueChanged(java.awt.event.AdjustmentEvent evt) {//GEN-FIRST:event_ordenArbolAdjustmentValueChanged
+        txtIncremet.setText(Integer.toString(evt.getValue()));
+    }//GEN-LAST:event_ordenArbolAdjustmentValueChanged
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.orden = Integer.parseInt(txtIncremet.getText());
+        try {
+            this.arbol = new ArbolMViasBusqueda<>(this.orden);
+        } catch (ExcepcionOrdenArbolInvalido ex) {
+            Logger.getLogger(Formulario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            this.cantDatos = cargarDatosAlArbol();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Formulario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
     
     private void insertarAlFinalDelArchivo(String word, String traslate) throws IOException {
         if (words.exists() && words.canWrite()) {
@@ -383,8 +392,8 @@ public class Formulario extends javax.swing.JFrame {
     private javax.swing.ButtonGroup btnGroup;
     private javax.swing.JButton btnInsertar;
     private javax.swing.JButton btnMore;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -392,8 +401,8 @@ public class Formulario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lbSize;
-    private javax.swing.JRadioButton rBtnAMVias;
-    private javax.swing.JTextField txtInput;
+    private javax.swing.JScrollBar ordenArbol;
+    private javax.swing.JTextField txtIncremet;
     private javax.swing.JTextArea txtOutput;
     // End of variables declaration//GEN-END:variables
 
