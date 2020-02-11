@@ -57,10 +57,6 @@ public class Formulario extends javax.swing.JFrame {
     private void initComponents() {
 
         btnGroup = new javax.swing.ButtonGroup();
-        btnBuscar = new javax.swing.JButton();
-        btnInsertar = new javax.swing.JButton();
-        btnEliminar = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
         btnMore = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtOutput = new javax.swing.JTextArea();
@@ -68,48 +64,15 @@ public class Formulario extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        txtIncremet = new javax.swing.JTextField();
-        ordenArbol = new javax.swing.JScrollBar();
-        jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 255, 204));
         setIconImages(null);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/search.png"))); // NOI18N
-        btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 310, 60, 60));
-
-        btnInsertar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/add.png"))); // NOI18N
-        btnInsertar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnInsertar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInsertarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnInsertar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, 60, 60));
-
-        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/remove.png"))); // NOI18N
-        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 310, 60, 60));
-
-        jLabel3.setFont(new java.awt.Font("Sitka Small", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel3.setText("Resultado:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-60, 400, 60, 22));
 
         btnMore.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/mas.png"))); // NOI18N
         btnMore.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -118,7 +81,7 @@ public class Formulario extends javax.swing.JFrame {
                 btnMoreActionPerformed(evt);
             }
         });
-        getContentPane().add(btnMore, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 310, 50, 60));
+        getContentPane().add(btnMore, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 250, 50, 60));
 
         txtOutput.setColumns(20);
         txtOutput.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
@@ -126,55 +89,54 @@ public class Formulario extends javax.swing.JFrame {
         txtOutput.setRows(5);
         jScrollPane1.setViewportView(txtOutput);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 520, 50));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 360, 500, 120));
 
         lbSize.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
         getContentPane().add(lbSize, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 460, 40, 31));
 
         jLabel6.setBackground(new java.awt.Color(204, 0, 51));
         jLabel6.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(204, 204, 255));
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("DICCTIONARY");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 160, 30));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 60, 160, 30));
 
         jLabel7.setBackground(new java.awt.Color(204, 0, 51));
-        jLabel7.setFont(new java.awt.Font("Snap ITC", 3, 36)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Stencil", 0, 36)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 51));
         jLabel7.setText("DICCIONARIO");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 360, 70));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, 260, 70));
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setText("Resultado:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, 100, 30));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, 130, 30));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/francia.png"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, 80, 60));
-
-        txtIncremet.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        getContentPane().add(txtIncremet, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, 30, 30));
-
-        ordenArbol.setMaximum(40);
-        ordenArbol.setMinimum(3);
-        ordenArbol.setVisibleAmount(7);
-        ordenArbol.setName(""); // NOI18N
-        ordenArbol.addAdjustmentListener(new java.awt.event.AdjustmentListener() {
-            public void adjustmentValueChanged(java.awt.event.AdjustmentEvent evt) {
-                ordenArbolAdjustmentValueChanged(evt);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconDel.png"))); // NOI18N
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
             }
         });
-        getContentPane().add(ordenArbol, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 250, 20, 30));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 230, -1, -1));
 
-        jButton1.setText("Crear arbol");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconAdd.png"))); // NOI18N
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 210, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo2.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 540));
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconSea.png"))); // NOI18N
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo5.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, 0, 860, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -202,60 +164,6 @@ public class Formulario extends javax.swing.JFrame {
             return 2;
        
     }
-    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-            String word = JOptionPane.showInputDialog("Palabra a buscar");
-            word = word.toLowerCase();
-            Palabra palabra = arbol.getDatoEnNodo(new Palabra(word, ""));
-            if (palabra != null) {
-                txtOutput.setText(palabra.getDefinition());
-            } else {
-                JOptionPane.showMessageDialog(null, "Palabra no encontrada");
-            }             
-    }//GEN-LAST:event_btnBuscarActionPerformed
-
-    private void btnInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertarActionPerformed
-        if (arbolEscogido() > -1) {
-            try {
-                String word = JOptionPane.showInputDialog("Palabra: ");
-                String traslate = JOptionPane.showInputDialog("Traduccion: ");
-                word = word.toLowerCase();
-                traslate.toLowerCase();
-                boolean b = this.arbol.insertar(new Palabra(word, traslate));
-                if (b) {
-                    insertarAlFinalDelArchivo(word, traslate);
-                    this.cantDatos++;
-                     lbSize.setText(Integer.toString(this.cantDatos));
-                    JOptionPane.showMessageDialog(null, "Palabra insertada correctamente");
-                } else {
-                    JOptionPane.showMessageDialog(null, "Palabra ya existente");
-                }
-            } catch (IOException ex) {
-                Logger.getLogger(Formulario.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        } else {
-            JOptionPane.showMessageDialog(null, "Escoja un Arbol !", "Advertencia !", 2);
-        }
-    }//GEN-LAST:event_btnInsertarActionPerformed
-
-    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-
-            String word = JOptionPane.showInputDialog("Ingrese la palabra a eliminar");
-            boolean b = this.arbol.eliminar(new Palabra(word, ""));
-            if (b) {
-                JOptionPane.showMessageDialog(null, "Palabra eliminada correctamente");
-            } else {
-                JOptionPane.showMessageDialog(null, "La palabra no existe");
-            }
-            List<Palabra> recorridoPorNiveles = this.arbol.recorridoPorNiveles();
-            try {
-                cargarAlArchivo(recorridoPorNiveles);
-            } catch (IOException ex) {
-                Logger.getLogger(Formulario.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            this.cantDatos--;
-             lbSize.setText(Integer.toString(this.cantDatos));
-    }//GEN-LAST:event_btnEliminarActionPerformed
-
     private void btnMoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMoreActionPerformed
         if (arbolEscogido() > -1) {
         
@@ -300,23 +208,60 @@ public class Formulario extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnMoreActionPerformed
 
-    private void ordenArbolAdjustmentValueChanged(java.awt.event.AdjustmentEvent evt) {//GEN-FIRST:event_ordenArbolAdjustmentValueChanged
-        txtIncremet.setText(Integer.toString(evt.getValue()));
-    }//GEN-LAST:event_ordenArbolAdjustmentValueChanged
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+            String word = JOptionPane.showInputDialog("Palabra a buscar");
+            word = word.toLowerCase();
+            Palabra palabra = arbol.getDatoEnNodo(new Palabra(word, ""));
+            if (palabra != null) {
+                txtOutput.setText(palabra.getDefinition());
+            } else {
+                JOptionPane.showMessageDialog(null, "Palabra no encontrada");
+            }             
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        this.orden = Integer.parseInt(txtIncremet.getText());
-        try {
-            this.arbol = new ArbolMViasBusqueda<>(this.orden);
-        } catch (ExcepcionOrdenArbolInvalido ex) {
-            Logger.getLogger(Formulario.class.getName()).log(Level.SEVERE, null, ex);
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+                if (arbolEscogido() > -1) {
+            try {
+                String word = JOptionPane.showInputDialog("Palabra: ");
+                String traslate = JOptionPane.showInputDialog("Traduccion: ");
+                word = word.toLowerCase();
+                traslate.toLowerCase();
+                boolean b = this.arbol.insertar(new Palabra(word, traslate));
+                if (b) {
+                    insertarAlFinalDelArchivo(word, traslate);
+                    this.cantDatos++;
+                     lbSize.setText(Integer.toString(this.cantDatos));
+                    JOptionPane.showMessageDialog(null, "Palabra insertada correctamente");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Palabra ya existente");
+                }
+            } catch (IOException ex) {
+                Logger.getLogger(Formulario.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Escoja un Arbol !", "Advertencia !", 2);
         }
-        try {
-            this.cantDatos = cargarDatosAlArbol();
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Formulario.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
+
+    }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        String word = JOptionPane.showInputDialog("Ingrese la palabra a eliminar");
+            boolean b = this.arbol.eliminar(new Palabra(word, ""));
+            if (b) {
+                JOptionPane.showMessageDialog(null, "Palabra eliminada correctamente");
+            } else {
+                JOptionPane.showMessageDialog(null, "La palabra no existe");
+            }
+            List<Palabra> recorridoPorNiveles = this.arbol.recorridoPorNiveles();
+            try {
+                cargarAlArchivo(recorridoPorNiveles);
+            } catch (IOException ex) {
+                Logger.getLogger(Formulario.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            this.cantDatos--;
+             lbSize.setText(Integer.toString(this.cantDatos));
+    }//GEN-LAST:event_jLabel2MouseClicked
     
     private void insertarAlFinalDelArchivo(String word, String traslate) throws IOException {
         if (words.exists() && words.canWrite()) {
@@ -387,22 +332,17 @@ public class Formulario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBuscar;
-    private javax.swing.JButton btnEliminar;
     private javax.swing.ButtonGroup btnGroup;
-    private javax.swing.JButton btnInsertar;
     private javax.swing.JButton btnMore;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lbSize;
-    private javax.swing.JScrollBar ordenArbol;
-    private javax.swing.JTextField txtIncremet;
     private javax.swing.JTextArea txtOutput;
     // End of variables declaration//GEN-END:variables
 
